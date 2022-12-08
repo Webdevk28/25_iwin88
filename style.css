@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&family=Dancing+Script:wght@500&family=Darker+Grotesque:wght@500&family=EB+Garamond&family=Montserrat:wght@500&family=Poppins&family=Quicksand:wght@500&family=Tinos&family=Ubuntu&family=Zilla+Slab:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.center{
+    font-family: 'Poppins', sans-serif;
+}
+.centers{
+    background-color: #4B2C89;
+}
+.head{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 28;
+    background-color: #4b2c89cf;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: darkgray;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, blue, #f9f871);
+    border-radius: 10px;
+  }
+/* box */
+  .box-item{
+    background-image: linear-gradient(to right,#ecac18,#efe882,#ecac18);
+    max-width: 440px;
+    border: 1px solid #fff;
+    margin: auto;
+    border-radius: 50px;
+    padding: 12px 25px;
+  }
+  .box{
+    box-shadow: 0 0 5px #fff, 0 0 13px #e5bb58, 0 0 21px #e5bb58, 0 0 29px #e5bb58;
+  }
+  .re-home{
+    transition: all .2s;
+    -webkit-animation: my-animation-l 1s ease-out 1.5s infinite alternate;
+    animation: my-animation-l 1s ease-out 1.5s infinite alternate;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: auto 0px; 
+    height: 1000px;
+  }
+  /* remove the below if you don't want smooth scrolling */
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+  .top {
+    --offset: 50px; 
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;      
+    margin-left:10px; 
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+  }
+  .top:before {
+    content:"";
+    position:absolute;
+    /* inset:30%; */
+    transform:translateY(20%) rotate(-45deg);
+  }
+
+  /* marquee slide */
+:root {
+    --marquee-width: 100%;
+    /* --marquee-height: 35vh; */
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+  }
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    /* background-color: #111; */
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee:before, .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+  .marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+  }
+  .marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+  }
+  .marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+  }
+  /* .marquee-content:hover {
+    animation-play-state: paused;
+  } */
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+  }
+  .marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 100%;
+    font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+    white-space: nowrap;
+  }
+  
+  .marquee-content li img {
+    width: 100%;
+    height: 100%;
+    border: 8px solid #4B2C89;
+    object-fit: coverj;
+  }
+  
+  /* @media (max-width: 600px) {
+    html { font-size: 12px; }
+    :root {
+      --marquee-width: 100vw;
+      --marquee-height: 16vh;
+      --marquee-elements-displayed: 3;
+    }
+    .marquee:before, .marquee:after { width: 5rem; }
+  } */
+
+/* responsive */
+
+@media (min-width: 320px) and (max-width: 480px){
+  .head .menu-list{
+    display: none;
+  }
+  .head .close-button{
+    display: block;
+  }
+  .head .head-item{
+    width: 100%;
+  }
+  /* main */
+  /* cover */
+  .main .ban{
+    width: 100%;
+    padding: 15px;
+  }
+  .main .box{
+    margin-top: 30px!important;
+  }
+  .main .box-item{
+    max-width: 450px;
+    border: 1px solid #fff;
+    margin: auto;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 21px;
+  }
+
+  /* slide marquee */
+  /* iwin */
+  .main .iwin-img{
+    width: 100%;
+  }
+
+  .main .apply-item{
+    width: 100%;
+  }
+
+  /* download */
+  .main .download-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* reson */
+  .main .reason{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .main .reason-item{
+    width: 100%;
+  }
+  /* footer */
+  .footer .footer-item{
+    width: 100%;
+    padding: 15px;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+  .head .menu-list{
+    display: none;
+  }
+  .head .close-button{
+    display: block;
+  }
+  .head .head-item{
+    width: 100%;
+  }
+  /* main */
+  /* cover */
+  .main .ban{
+    width: 100%;
+    padding: 15px;
+  }
+  .main .box{
+    margin-top: 35px!important;
+  }
+  /* slide marquee */
+  /* iwin */
+  .main .iwin-img{
+    width: 100%;
+  }
+
+  .main .apply-item{
+    width: 100%;
+  }
+
+  /* download */
+  .main .download-item{
+    width: 100%;
+  }
+
+  /* reson */
+  .main .reason{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .main .reason-item{
+    width: 100%;
+  }
+  /* footer */
+  .footer .footer-item{
+    width: 100%;
+    padding: 15px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1025px){
+  .head .menu-list{
+    display: none;
+  }
+  .head .close-button{
+    display: block;
+  }
+  .head .head-item{
+    width: 100%;
+  }
+  /* main */
+  /* cover */
+  .main .ban{
+    width: 100%;
+    padding: 15px;
+  }
+  .main .box{
+    margin-top: 35px!important;
+  }
+  /* slide marquee */
+  /* iwin */
+  .main .iwin-img{
+    width: 70%;
+  }
+
+  .main .apply-item{
+    width: 100%;
+  }
+
+  /* download */
+  .main .download-item{
+    width: 100%;
+  }
+
+  /* reson */
+  .main .reason{
+    padding: 15px;
+  }
+  .main .reason-item{
+    width: 100%;
+  }
+  /* footer */
+  .footer .footer-item{
+    width: 100%;
+    padding: 15px;
+  }
+
+}
